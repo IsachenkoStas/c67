@@ -9,13 +9,16 @@ public class CreditCard {
         this.accNumber = accNumber;
         this.balance = balance;
     }
-    double chargeBalance(int cash){
+
+    double chargeBalance(int cash) {
         return currBalance = balance + cash;
     }
-    double withdrawMoney(int cash){
+
+    double withdrawMoney(int cash) {
         return currBalance = balance - cash;
     }
-    void info(){
-        System.out.println("Текущая информация о карте: " + '\n' + accNumber + " - Номер счета "+ '\n' + currBalance + " - Текущий баланс");
+
+    void info() {
+        System.out.println("Текущая информация о карте: " + '\n' + accNumber + " - Номер счета " + '\n' + currBalance + " - Текущий баланс");
     }
 }
