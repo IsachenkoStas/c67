@@ -9,6 +9,10 @@ public class Patient {
     }
 
     public void setPlanOfTreatment(int planOfTreatment) {
+        if (planOfTreatment < 0) {
+            throw new IllegalArgumentException
+                    ("Значение value должно быть положительным числом!");
+        }
         this.planOfTreatment = planOfTreatment;
     }
 
