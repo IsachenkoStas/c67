@@ -2,25 +2,26 @@ package HomeTask7;
 
 public class Patient {
     private int planOfTreatment;
-    private String doc;
+    private Doctors doctors;
+
+    public Patient(int planOfTreatment) {
+        this.planOfTreatment = planOfTreatment;
+    }
 
     public int getPlanOfTreatment() {
         return planOfTreatment;
     }
 
     public void setPlanOfTreatment(int planOfTreatment) {
-        if (planOfTreatment < 0) {
-            throw new IllegalArgumentException
-                    ("Значение value должно быть положительным числом!");
-        }
         this.planOfTreatment = planOfTreatment;
     }
 
-    public String getDoc() {
-        return doc;
+    public Doctors getDoctors() {
+        return doctors;
     }
 
-    public void setDoc(String doc) {
-        this.doc = doc;
+    public void setDoctors(Doctors doctors) {
+        this.doctors = doctors;
     }
 }
+
