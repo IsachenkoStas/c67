@@ -1,5 +1,5 @@
 package OOP;
 
-public class Employee extends Person {
+public class Employee extends Chelovek {
 
 }

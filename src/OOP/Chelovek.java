@@ -1,6 +1,6 @@
 package OOP;
 
-public class Person {
+public class Chelovek {
 /*    String name;
     int age;
     double weight;
@@ -17,7 +17,7 @@ public class Person {
         System.out.println(weight);
     }*/
 
-    public String name = "Stas";
+/*    public String name = "Stas";
     int age = 24;
     private String gender = "Man";
 
@@ -43,5 +43,15 @@ public class Person {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }*/
+
+    public final static String name;
+
+    static {
+        name  = "Stas";
+    }
+
+    public final static void sayMyName() {
+        System.out.println(name);
     }
 }

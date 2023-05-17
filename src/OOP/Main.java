@@ -8,9 +8,9 @@ public class Main {
         build.setColor("Green");
         System.out.println(build.getColor());*/
 
-        Person person = new Person();
+/*        Chelovek person = new Chelovek();
         person.getAge();
         person.getGender();
-        person.getName();
+        person.getName();*/
     }
 }
