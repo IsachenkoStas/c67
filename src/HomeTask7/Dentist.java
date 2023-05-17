@@ -1,6 +1,6 @@
 package HomeTask7;
 
-public class Dentist extends Doctors{
+public class Dentist extends Doctors {
     @Override
     void treat() {
         super.treat();

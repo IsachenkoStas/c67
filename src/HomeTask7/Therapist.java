@@ -17,15 +17,15 @@ public class Therapist extends Doctors {
         if (treatmentPlan == 1) {
             p.setDoc("Dentist");
             d.treat();
-        //    System.out.println("dentist");
+            //    System.out.println("dentist");
         } else if (treatmentPlan == 2) {
             p.setDoc("Surgeon");
             s.treat();
-       //     System.out.println("surgeon");
+            //     System.out.println("surgeon");
         } else if (treatmentPlan > 2) {
             p.setDoc("Therapist");
             t.treat();
-        //    System.out.println("therapist");
+            //    System.out.println("therapist");
         } else {
             System.out.println("wrong number");
         }
