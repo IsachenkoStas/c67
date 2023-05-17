@@ -1,3 +1,5 @@
+package Lessons;
+
 public class Calculator {
     int weight = 15;
     int cost = 100;

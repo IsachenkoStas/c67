@@ -1,3 +1,5 @@
+package Lessons;
+
 public class NewClass {
         // 1. Состояние - (характеристики, что-то описывающее) цвет, вес, порода
         String color;
@@ -8,7 +10,7 @@ public class NewClass {
         // 2. Поведение - (что он умеет) мяукать, бегать
 
         // КОНСТРУКТОР ПО УМОЛЧАНИЮ
-/*        public NewClass() {
+/*        public Lessons.NewClass() {
                 System.out.println("We create object");*/
         //}
 

@@ -1,3 +1,5 @@
+package Lessons;
+
 public class CalculatorObject {
     public static void main(String[] args) {
         Calculator calculator = new Calculator(43,5,"Green");
