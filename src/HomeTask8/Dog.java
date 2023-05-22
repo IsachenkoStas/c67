@@ -1,13 +1,14 @@
 package HomeTask8;
 
-public class Dog extends Animal {
-    @Override
-    void voice() {
+public class Dog extends Animal{
+    private Dog() {
+    }
+
+    static void dogVoice() {
         System.out.println("Dog's bark");
     }
 
-    @Override
-    void eat(String food) {
+    static void dogEat(String food) {
         if (food.equals("meat")) {
             System.out.println("Thank u mister <3");
         } else if (food.equals("grass")) {
