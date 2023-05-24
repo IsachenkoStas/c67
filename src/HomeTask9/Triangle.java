@@ -7,25 +7,13 @@ public class Triangle extends Figure {
     private double h;
 
     public Triangle(double a, double b, double c, double h) {
-        if (a > 0) {
+        if (a > 0 && b > 0 && c > 0 && h > 0) {
             this.a = a;
-        } else {
-            System.out.println("error");
-        }
-        if (b > 0) {
             this.b = b;
-        } else {
-            System.out.println("error");
-        }
-        if (c > 0) {
             this.c = c;
-        } else {
-            System.out.println("error");
-        }
-        if (h > 0) {
             this.h = h;
         } else {
-            System.out.println("error");
+            System.out.println("Wrong number!!!");
         }
     }
 

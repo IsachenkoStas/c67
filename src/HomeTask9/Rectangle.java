@@ -5,15 +5,11 @@ public class Rectangle extends Figure {
     private double b;
 
     public Rectangle(double a, double b) {
-        if (a > 0) {
+        if (a > 0 && b > 0) {
             this.a = a;
-        } else {
-            System.out.println("error");
-        }
-        if (b > 0) {
             this.b = b;
         } else {
-            System.out.println("error");
+            System.out.println("Wrong number!!!");
         }
     }
 

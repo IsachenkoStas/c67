@@ -7,7 +7,7 @@ public class Circle extends Figure {
         if (r > 0) {
             this.r = r;
         } else {
-            System.out.println("error");
+            System.out.println("Wrong number!!!");
         }
     }
 
