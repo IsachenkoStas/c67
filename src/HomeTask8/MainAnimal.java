@@ -10,7 +10,7 @@ public class MainAnimal {
         Rabbit r = new Rabbit();
         tiger.eat("meat");
         tiger.voice();
-        Dog.dogEat("grass");
+        Dog.dogEat("water");
         Dog.dogVoice();
         r.eat("grass");
         r.voice();
