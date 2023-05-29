@@ -7,6 +7,7 @@ public class Main {
         BMW car = new BMW();
         car.signal();
 
+
         FirstInterface.changeSpeed(564);
 
         FirstInterface automobile = new BMW();
