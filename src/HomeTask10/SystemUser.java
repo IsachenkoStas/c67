@@ -3,7 +3,7 @@ package HomeTask10;
 import java.util.Date;
 import java.util.Objects;
 
-public class SystemUser {
+public class SystemUser implements Cloneable {
     private String login;
     private String password;
 
@@ -47,5 +47,10 @@ public class SystemUser {
     @Override
     public int hashCode() {
         return (int) (17 * login.hashCode() * password.hashCode() * (new Date().getTime()));
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
