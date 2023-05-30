@@ -6,7 +6,9 @@ import java.util.Scanner;
 public class MainStringMethods {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String[] arr = {"hello", "madam", "do", "you", "like", "radar"};
+//        String[] arr = {"hello", "madam", "do", "you", "like", "radar"};
+        String line = "hello madam do you like radar";
+        String[] arr = line.split(" ");
         int n = scanner.nextInt();
         for (int i = 0; true; ) {
             if (n <= arr.length) {
