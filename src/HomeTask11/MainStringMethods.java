@@ -11,7 +11,7 @@ public class MainStringMethods {
         String[] arr = line.split(" ");
         System.out.print("Введите число: ");
         int n = scanner.nextInt();
-        if (n <= arr.length) {
+        if (n <= arr.length && n > 0) {
             StringBuilder sBL = new StringBuilder(arr[n - 1]);
             sBL.reverse();
             String res = sBL.toString();
@@ -67,7 +67,32 @@ public class MainStringMethods {
             }
         }*/
         //Task 1.4
-
+        Scanner sc2 = new Scanner(System.in);
+        String[] linesArr = new String[3];
+        boolean flag = false;
+        for (int i = 0; i < linesArr.length; i++) {
+            System.out.println("Введите строку №" + (i + 1));
+            linesArr[i] = sc2.nextLine();
+        }
+        for (String word : linesArr) {
+            for (int i = 0; i < word.length() - 1; i++) {
+                for (int j = i + 1; j < word.length(); j++) {
+                    if (word.charAt(i) != word.charAt(j)) {
+                        flag = true;
+                    } else {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (!flag) {
+                    break;
+                }
+            }
+            if (flag) {
+                System.out.println("unique word - " + word);
+                break;
+            }
+        }
 
         // Task 1.5
 /*          Scanner scanner = new Scanner(System.in);
@@ -78,25 +103,5 @@ public class MainStringMethods {
             String symbol = String.valueOf(line.charAt(i));
             System.out.print(symbol.repeat(2));
         }*/
-
-        int numberOfStrings = 3;
-        Scanner sc = new Scanner(System.in);
-        String shortestLine = null;
-        String longest = null;
-        for (int i = 0; i < numberOfStrings; i++) {
-            System.out.println("Введите строку №" + (i + 1));
-            String line = sc.nextLine();
-            if (i == 0) {
-                shortestLine = line;
-                longest = line;
-            } else if (shortestLine.length() > line.length()) {
-                shortestLine = line;
-
-            } else if (longest.length() < line.length()) {
-                longest = line;
-            }
-        }
-        System.out.println("Самая короткая строка: " + shortestLine + ". Длинна самой короткой строки: " + shortestLine.length());
-        System.out.println("Самая длинная строка: " + longest + ". Длинна самой длинной строки: " + longest.length());
     }
 }
