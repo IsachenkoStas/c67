@@ -70,7 +70,7 @@ public class MainStringMethods {
 
 
         // Task 1.5
-/*        Scanner scanner = new Scanner(System.in);
+/*          Scanner scanner = new Scanner(System.in);
         System.out.print("Введите строку - ");
         String line = scanner.nextLine();
         char[] ch = line.toCharArray();
@@ -79,5 +79,24 @@ public class MainStringMethods {
             System.out.print(symbol.repeat(2));
         }*/
 
+        int numberOfStrings = 3;
+        Scanner sc = new Scanner(System.in);
+        String shortestLine = null;
+        String longest = null;
+        for (int i = 0; i < numberOfStrings; i++) {
+            System.out.println("Введите строку №" + (i + 1));
+            String line = sc.nextLine();
+            if (i == 0) {
+                shortestLine = line;
+                longest = line;
+            } else if (shortestLine.length() > line.length()) {
+                shortestLine = line;
+
+            } else if (longest.length() < line.length()) {
+                longest = line;
+            }
+        }
+        System.out.println("Самая короткая строка: " + shortestLine + ". Длинна самой короткой строки: " + shortestLine.length());
+        System.out.println("Самая длинная строка: " + longest + ". Длинна самой длинной строки: " + longest.length());
     }
 }
