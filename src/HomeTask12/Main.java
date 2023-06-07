@@ -6,16 +6,16 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-            // Task 1
+        // Task 1
 /*        Scanner scanner = new Scanner(System.in);
         System.out.print("Введите строку: ");
         String line = scanner.nextLine();
         Pattern pattern = Pattern.compile("[А-ЯA-Z]{2,6}");
         Matcher matcher = pattern.matcher(line);
-        while (matcher.find()){
+        while (matcher.find()) {
             System.out.println(matcher.group());
         }*/
-            // Task 2
+        // Task 2
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите строку: ");
         String line = scanner.nextLine();
@@ -24,7 +24,7 @@ public class Main {
         while (matcher1.find()) {
             System.out.println("email: " + matcher1.group());
         }
-        Pattern pattern2 = Pattern.compile("[\\+]?[\\(]?[0-9]{2}[\\)]?[0-9]{7}");
+        Pattern pattern2 = Pattern.compile("[+][(][0-9]{2}[)][0-9]{7}");
         Matcher matcher2 = pattern2.matcher(line);
         while (matcher2.find()) {
             System.out.println("phone number: " + matcher2.group());
