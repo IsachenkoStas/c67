@@ -44,8 +44,8 @@ public class MainHT14 {
             } else {
                 fileWriter1.write(s + " - не подходит по условиям валидности\n");
             }
-            fileWriter.close();
-            fileWriter1.close();
         }
+        fileWriter.close();
+        fileWriter1.close();
     }
 }
