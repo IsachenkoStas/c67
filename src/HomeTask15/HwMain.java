@@ -1,6 +1,7 @@
 package HomeTask15;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class HwMain {
     public static void main(String[] args) {
@@ -23,7 +24,7 @@ public class HwMain {
 //        a.getAnimals().add("fish");
 //        System.out.println(a.getAnimals());
 
-        // Task 3
+//        // Task 3
 //        Student student1 = new Student("stas", 1, 1, 5);
 //        Student student2 = new Student("vasya", 2, 2, 3);
 //        Student student3 = new Student("kolya", 3, 3, 2);
@@ -38,6 +39,20 @@ public class HwMain {
 //
 //        StudentList.checkGrades(studentList);
 //        StudentList.printStudents(studentList, 2);
+
+        // task 4
+//        MyOwnList<Integer> list = new MyOwnList<>();
+//        list.add(1);
+//        list.add(2);
+//        list.add(3);
+//        list.add(10);
+//        System.out.println(list);
+//        list.remove(3);
+//        System.out.println(list);
+//        System.out.println(list.getElem(2));
+//        System.out.println(list.contains(10));
+//        list.clear();
+//        System.out.println(list);
     }
 }
 
