@@ -13,10 +13,10 @@ public class HTMain {
             array[i] = new Scanner(System.in).nextInt();
         }
 
-//        FindMaxThread thread1 = new FindMaxThread(array);
-//        thread1.start();
-//        FindMinThread thread2 = new FindMinThread(array);
-//        thread2.start();
+        FindMaxThread thread1 = new FindMaxThread(array);
+        thread1.start();
+        FindMinThread thread2 = new FindMinThread(array);
+        thread2.start();
 
         SelectionSortThread selectionSortThread = new SelectionSortThread(array);
         InsertionSortThread insertionSortThread = new InsertionSortThread(array);

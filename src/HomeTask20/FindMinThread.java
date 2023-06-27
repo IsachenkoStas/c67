@@ -13,13 +13,14 @@ public class FindMinThread extends Thread {
 
     @Override
     public void run() {
-        int min = array[0];
-        for (int i = 1; i < array.length; i++) {
-            if (array[i] < min) {
-                min = array[i];
-            }
-        }
-        System.out.println("min value = " + min);
+//        int min = array[0];
+//        for (int i = 1; i < array.length; i++) {
+//            if (array[i] < min) {
+//                min = array[i];
+//            }
+//        }
+//        System.out.println("min value = " + min);
+        System.out.println("min value = " + Arrays.stream(array).min());
     }
 
     public int[] getArray() {
