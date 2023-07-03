@@ -8,15 +8,18 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
+
         HashMap<String, Integer> accounts = new HashMap<>();
+        LocalDateTime date = LocalDateTime.now();
         try {
-            BufferedReader br = new BufferedReader(new FileReader("/Users/allencooper/Desktop/AccsInfo.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("src/TransferProject/AccsInfo"));
             String s;
             while ((s = br.readLine()) != null) {
-                accounts.put(s.substring(0, 11), Integer.parseInt(s.substring(13, 17)));
+                accounts.put(s.substring(0, 11), Integer.parseInt(s.substring(13)));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -28,6 +31,7 @@ public class Main {
             for (File file : fileList) {
                 BufferedReader br = new BufferedReader(new FileReader(file));
                 String line;
+                String res= null;
                 while ((line = br.readLine()) != null) {
                     if (line.matches("\\d{5}\\-\\d{5}\\|\\d{5}\\-\\d{5}\\: \\d+")) {
                         int cashOut = accounts.get(line.substring(0, 11)) - Integer.parseInt(line.substring(25));
@@ -35,11 +39,14 @@ public class Main {
                         if (accounts.get(line.substring(0, 11)) > Integer.parseInt(line.substring(25))) {
                             accounts.replace(line.substring(0, 11), cashOut);
                             accounts.replace(line.substring(12, 23), cashIn);
+                            res = " Success!!!";
+                        } else {
+                            res = " Smth went wrong :((";
                         }
                     }
                 }
-                try (FileWriter fileWriter = new FileWriter("/Users/allencooper/Desktop/archive.txt")) {
-                    fileWriter.write(String.valueOf(fileList));
+                try (FileWriter reportFile = new FileWriter("src/TransferProject/reportFile", true)) {
+                    reportFile.write("Date: " + date + ". File name - " + file.getName() + ". Result - " + res + '\n');
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -47,6 +54,12 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(accounts);
+        try (FileWriter fileWriter = new FileWriter("src/TransferProject/AccsInfo")) {
+            for (Map.Entry e : accounts.entrySet()) {
+                fileWriter.write(e.getKey() + ": " + e.getValue() + '\n');
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

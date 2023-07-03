@@ -9,7 +9,7 @@ public class ParseMoneyTransfers {
         if (rootFile.isDirectory()) {
             File[] directoryFiles = rootFile.listFiles();
             if (directoryFiles != null) {
-                for (File file: directoryFiles) {
+                for (File file : directoryFiles) {
                     if (file.isDirectory()) {
                         getFiles(file, fileArchive);
                     } else {
