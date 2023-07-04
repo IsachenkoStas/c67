@@ -3,7 +3,7 @@ package TransferProject;
 import java.io.File;
 import java.util.List;
 
-public class ParseMoneyTransfers {
+public class ParseDirectory {
 
     public static void getFiles(File rootFile, List<File> fileList) {
         if (rootFile.isDirectory()) {
@@ -18,6 +18,8 @@ public class ParseMoneyTransfers {
                         }
                     }
                 }
+            } else {
+                System.out.println("No such file");
             }
         }
     }
