@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class MainStream {
     public static void main(String[] args) {
@@ -46,11 +47,12 @@ public class MainStream {
             put(9, "Jason");
             put(13, "Statham");
         }};
-        idNameMap.entrySet().stream()
-                .filter(key -> key.getKey().toString()
-                        .matches("([12589])|13"))
+        List<String> list = idNameMap.entrySet().stream()
+                .filter(key -> key.getKey().toString().matches("([12589])|13"))
                 .map(Map.Entry::getValue)
                 .filter(value -> value.length() % 2 == 1)
-                .forEach(e -> System.out.print(new StringBuilder(e).reverse() + " "));
+                .map(s -> new StringBuilder(s).reverse().toString())
+                .toList();
+        System.out.println(list);
     }
 }

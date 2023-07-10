@@ -2,6 +2,7 @@ package HomeTask14;
 
 import java.io.*;
 import java.util.Arrays;
+import java.util.Collection;
 
 public class MainHT14 {
     public static void main(String[] args) throws IOException {

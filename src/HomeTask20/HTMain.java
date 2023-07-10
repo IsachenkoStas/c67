@@ -1,10 +1,9 @@
 package HomeTask20;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class HTMain {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         System.out.print("Enter array size - ");
         int size = new Scanner(System.in).nextInt();
         int[] array = new int[size];
@@ -14,8 +13,9 @@ public class HTMain {
         }
 
         FindMaxThread thread1 = new FindMaxThread(array);
-        thread1.start();
         FindMinThread thread2 = new FindMinThread(array);
+
+        thread1.start();
         thread2.start();
 
         SelectionSortThread selectionSortThread = new SelectionSortThread(array);

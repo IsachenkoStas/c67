@@ -12,13 +12,6 @@ public class FindMaxThread extends Thread {
 
     @Override
     public void run() {
-//        int max = array[0];
-//        for (int i = 1; i < array.length; i++) {
-//            if (array[i] > max) {
-//                max = array[i];
-//            }
-//        }
-//        System.out.println("max value = " + max);
         System.out.println("max value = " + Arrays.stream(array).max());
     }
 

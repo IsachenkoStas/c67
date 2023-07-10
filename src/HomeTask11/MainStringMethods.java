@@ -67,7 +67,7 @@ public class MainStringMethods {
             }
         }*/
         //Task 1.4
-        Scanner sc2 = new Scanner(System.in);
+/*        Scanner sc2 = new Scanner(System.in);
         String[] linesArr = new String[3];
         boolean flag = false;
         for (int i = 0; i < linesArr.length; i++) {
@@ -92,7 +92,7 @@ public class MainStringMethods {
                 System.out.println("unique word - " + word);
                 break;
             }
-        }
+        }*/
 
         // Task 1.5
 /*          Scanner scanner = new Scanner(System.in);
@@ -103,5 +103,9 @@ public class MainStringMethods {
             String symbol = String.valueOf(line.charAt(i));
             System.out.print(symbol.repeat(2));
         }*/
+
+        Solution solution = new Solution();
+        int[] twoSum = {1,2,3,4,5};
+        System.out.println(Arrays.toString(solution.twoSum(twoSum, 7)));
     }
 }

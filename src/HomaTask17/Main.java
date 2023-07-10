@@ -18,16 +18,15 @@ public class Main {
 
         Task 2
         int[] numbers = {1, 5, -10, 3, -45, 500, -1000, 4355, -900, 900, -21312, 23, -45};
+        Predicate<Integer> posNumbs = (num) -> num > 0;
         for (int number : numbers) {
-            Predicate<Integer> posNumbs = (num) -> num > 0;
             if (posNumbs.test(number)) {
                 System.out.print(number + " ");
             }
         }
 
         Task 3
-
-        Function<String, Double> fl = (a) -> Double.parseDouble(a) / 2.94;
+        Function<String, Double> fl = (line) -> Double.parseDouble(line.replaceAll(" BYN", "")) / 2.94;
         System.out.println(fl.apply(new Scanner(System.in).nextLine()) + " $");
 
         Task 4

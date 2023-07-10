@@ -1,5 +1,6 @@
 package HomeTask15;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -28,7 +29,9 @@ public class MyOwnList<T> {
         if (index < 0 || index > size - 1) {
             throw new IllegalArgumentException("Wrong index");
         } else {
-            if (size - index >= 0) System.arraycopy(list, index + 1, list, index, size - index);
+            if (size - index >= 0) {
+                System.arraycopy(list, index + 1, list, index, size - index);
+            }
 //            for (int i = index; i < size; i++) {
 //                list[i] = list[i + 1];
 //            }
@@ -62,9 +65,12 @@ public class MyOwnList<T> {
 
     @Override
     public String toString() {
-        return "MyOwnList{" +
-                "list=" + Arrays.toString(list) +
-                '}';
+        for (int i = 0; i < size; i++) {
+            if (list[i] != null){
+                System.out.println(list[i]);
+            }
+        }
+        return "";
     }
 
     @Override

@@ -41,18 +41,18 @@ public class HwMain {
 //        StudentList.printStudents(studentList, 2);
 
         // task 4
-//        MyOwnList<Integer> list = new MyOwnList<>();
-//        list.add(1);
-//        list.add(2);
-//        list.add(3);
-//        list.add(10);
+        MyOwnList<Integer> list = new MyOwnList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(10);
 //        System.out.println(list);
 //        list.remove(3);
 //        System.out.println(list);
 //        System.out.println(list.getElem(2));
 //        System.out.println(list.contains(10));
 //        list.clear();
-//        System.out.println(list);
+        System.out.println(list);
     }
 }
 
